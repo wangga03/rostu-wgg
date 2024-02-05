@@ -64,7 +64,7 @@ float koordinat_x = 0;
 float old_last_y = 0;
 float old_last_x = 0;
 
-  float temp_xA, temp_yA, temp_yB, temp_xB;
+float temp_xA, temp_yA, temp_yB, temp_xB;
 
 void setup() {
   // Set pin sebagai input
