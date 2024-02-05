@@ -51,7 +51,6 @@ float old_last_y = 0;
 float old_last_x = 0;
 
 float temp_x, temp_y;
-float test_satu;
 
 // Kicker 
 
