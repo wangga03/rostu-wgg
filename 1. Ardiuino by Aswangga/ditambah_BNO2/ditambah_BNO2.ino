@@ -52,7 +52,42 @@ float old_last_x = 0;
 
   float temp_x, temp_y;
 
+// Kicker 
+
+void baca_kick_data( const std_msgs::UInt8& kick_data) {
+  kick = int(kick_data.data);
+  if (kick == 10) { //charging
+    digitalWrite(32, HIGH);
+    delay(500);
+  }  
+  if (kick == 5) { //stop charging
+    digitalWrite(32, LOW);
+    delay(500);
+    // digitalWrite(32, HIGH);
+    // delay(50);
+    digitalWrite(30, LOW);
+    delay(200);
+  }
+  if (kick == 20) { //kick trigger kuat
+    digitalWrite(32, LOW);
+    delay(500);
+    digitalWrite(30, HIGH);
+    delay(100);
+    digitalWrite(30, LOW);
+    delay(200);
+
+  }
+
+}
+
+ros::Subscriber<std_msgs::UInt8> sub("topic_kick", & baca_kick_data);
+
 void setup() {
+//  Pin Kicker
+
+  pinMode(30, OUTPUT);
+  pinMode(32, OUTPUT);
+  
   // Set pin sebagai input
   pinMode(pin_yA, INPUT);
   pinMode(pin_yB, INPUT);
@@ -90,6 +125,8 @@ void setup() {
     while (1);
   }
 }
+
+
 
 void loop() {
 
