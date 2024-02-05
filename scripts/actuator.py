@@ -504,7 +504,7 @@ def ngitung2():
 
     if(outy > 0.6) : outy = 0.6
     if(outy < -0.6) : outy = -0.6
-    if(outw <0.1 and outw >0.1) outy = 0
+    if(outw <0.1 and outw >0.1) : outy = 0 # Ini dari angga
     # integral += (error_jrk/1000)*ki 
     # derivative = (error_jrk/1000) - pre_error_sudut
     # pre_error_sudut = (error_sdt/1000)
