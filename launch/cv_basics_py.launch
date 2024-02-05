@@ -1,0 +1,27 @@
+<launch>
+  <node
+    pkg="cv_basics"
+    type="webcam_pub.py"
+    name="webcam_pub"
+    output="screen"
+  />
+  <node
+    pkg="cv_basics"
+    type="webcam_sub.py"
+    name="webcam_sub"
+    output="screen"
+  />
+  <node
+    pkg="rosserial_python"
+    type="serial_node.py"
+    name="serial_motor"
+    output="screen"
+  />
+  <node
+    pkg="rosserial_python2"
+    type="serial_node.py"
+    name="serial_kick_mpu"
+    output="screen"
+  />
+</launch>
+

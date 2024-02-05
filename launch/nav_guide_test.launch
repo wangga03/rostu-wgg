@@ -1,0 +1,11 @@
+<launch>
+
+<node pkg="rosserial_python" type="encoder_imu.py" name="Node_Arduino" output="screen"/>
+<node pkg="rosserial_python" type="serial_node.py" name="Node_Teensy" output="screen"/>
+<node pkg="rosserial_python" type="Node_kicker.py" name="Node_Kick" output="screen"/>
+<node pkg="cv_basics" type="actuator.py" name="Node_Actuator" output="screen"/>
+<node pkg="cv_basics" type="navigasi_enc.py" name="Node_navigasi" output="screen"/>
+<node pkg="cv_basics" type="bola.py" name="Node_Camera" output="screen"/>
+<node pkg="cv_basics" type="guidance_new.py" name="" output="screen"/>
+
+</launch>

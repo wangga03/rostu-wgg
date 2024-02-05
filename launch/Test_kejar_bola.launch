@@ -1,0 +1,8 @@
+<launch>
+<node pkg="cv_basics" type="bola.py" name="Node_Camera" output="screen" /> 
+<node pkg="cv_basics" type="coba_kejar_bola.py" name="Node_guidance" output="screen"/> 
+<node pkg="rosserial_python" type="node_serial_motor.py" name="Node_motor" output="screen"/>
+<!-- <node pkg="rosserial_python" type="encoder_imu.py" name="Node_Arduino" output="screen"/> -->
+
+</launch>
+
